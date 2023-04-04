@@ -10,7 +10,7 @@ fetch(api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={b42218
   })
   .then(function (data) {
     console.log(data);
-    (data).value
+    cityInput = (data).value
         if(localStorage.getItem('previous-searches') === null) {
             localStorage.setItem('previous-searches', '[]');
             var previousSearchElement = JSON.parse(localStorage.getItem('previous-searches'));
@@ -22,6 +22,6 @@ fetch(api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={b42218
                 }
             }
         }
-    );
+    });
 }
  
